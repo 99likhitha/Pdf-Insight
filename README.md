@@ -1,36 +1,46 @@
+# PDF Insight 📄💡
+
+Welcome to the **PDF Query Assistant**, a Streamlit-based web application that enables you to upload PDF files and ask detailed questions about their content. The app uses advanced AI models for text processing, embedding generation, and conversational AI to provide accurate and context-based answers.
+
 ---
 
-## AI Models Used
+## Features ✨
 
-This project uses cutting-edge AI models to provide accurate and efficient query handling for PDF content:
+- **PDF Upload and Text Extraction**: Upload multiple PDF files, and the app will extract their text for processing.
+- **Text Chunking**: Splits extracted text into manageable chunks for better processing.
+- **Vector Storage**: Uses a vector database to store and retrieve relevant text chunks for answering questions.
+- **Conversational AI**: Allows natural language interaction for question-answering.
 
-### 1. **OpenAI Embeddings** (`text-embedding-ada-002`)
-   - **Purpose**: 
-     - Converts text into high-dimensional embeddings for similarity search.
-     - Enables efficient and meaningful retrieval of relevant information from the uploaded PDFs.
-   - **Why It’s Used**: 
-     - This model provides robust text representations, ensuring accurate matching between user queries and document content.
+---
 
-### 2. **Google Generative AI** (Gemini Pro)
-   - **Purpose**:
-     - Processes user queries in a conversational manner.
-     - Generates detailed, context-aware responses to user questions based on the extracted PDF content.
-   - **Why It’s Used**: 
-     - Provides highly detailed and human-like responses while ensuring correctness when referencing provided content.
-     - It has a low temperature (0.3) setup for increased factuality and precision.
+## AI Models Used 🤖
 
-### 3. **LangChain Framework**
+### 1. **OpenAI Embeddings**
+
+- **Model**: `text-embedding-ada-002`
+- **Purpose**: Converts text into high-dimensional embeddings for semantic similarity searches.
+- **Use Case**: Embedding generation for storing and retrieving chunks of text from a vector database.
+
+### 2. **Google Generative AI (Gemini-Pro)**
+
+- **Model**: `gemini-pro`
+- **Purpose**: Provides accurate, context-aware answers to user questions.
+- **Use Case**: Generates detailed and accurate conversational responses based on retrieved text.
+
+
+### 3. LangChain Framework
    - **Purpose**:
      - Combines various components like embeddings, vector databases, and prompt templates into a seamless chain for question answering.
    - **Why It’s Used**:
      - Simplifies the orchestration of different AI components, enabling the app to focus on answering questions accurately and efficiently.
 
-### 4. **FAISS** (Facebook AI Similarity Search)
+### 4. FAISS(Facebook AI Similarity Search)
    - **Purpose**:
      - Efficiently stores and retrieves embeddings for similarity search.
      - Matches user queries to relevant PDF content chunks.
    - **Why It’s Used**:
      - Ensures fast and scalable search, even for large volumes of text data.
+
 
 ---
 
